@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SCORE SENSE NAVIGATOR</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+
+  <!-- font awesome style -->
+  <link href="static/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area" style="background-image: url(/static/images/creative-forex-chart-on-blue-600nw-1377926345.webp)">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              SCORE SENSE NAVIGATOR
+              {% if current_user %}
+              loggined as {{user.username}}
+              {% endif %}
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              
+             
+              
+              {% if current_user %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'myprofile' %}"> My profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'prediction1' %}">Prediction</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">register</a>
+              </li>
+              {% endif %}
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contactus' %}">contactus</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- job section -->
+  <section class="job_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          BANK
+        </h2>
+      </div>
+      <div class="job_container">
+        <h4 class="job_heading">
+          Loans
+        </h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="/static/images/download.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    HDFC Bank 
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      
+                      <span>
+                         Loans
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1200 - $1300
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="https://www.hdfcbank.com./" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="/static/images/state-bank-of-india4988.logowik.com.webp" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    SBI
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      
+                      <span>
+                         Loans
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $200 - $340
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="https://sbi.co.in/web/interest-rates/interest-rates/loan-schemes-interest-rates" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="/static/images/c1ef2e91b95eac43bc00afbd580d23a3.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Canara Bank 
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      
+                      <span>
+                        Loans
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $1200/mo
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="https://business.mapsofindia.com/banks-in-india/canara-bank-loans.html" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="/static/images/mahindra-finance.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Mahindra Finance
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      
+                      <span>
+                        Loans
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $56 - $90
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="https://www.mahindrafinance.com/loans" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="/static/images/IDBI-Bank-Emblem.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    IDBI Bank 
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      
+                      <span>
+                        Loans
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $400 - $540
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="https://www.bankofbaroda.in/banking-mantra/loans-borrowings/articles/the-different-types-of-loans-available-in-india" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="job_content-box">
+                <div class="img-box">
+                  <img src="/static/images/ax6638a05f-axis-bank-logo-axis-bank-logo-png-images-free-png-images-vector-psd-clipart.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Axis Bank 
+                  </h5>
+                  <div class="detail-info">
+                    <h6>
+                      
+                      <span>
+                        Loans
+                      </span>
+                    </h6>
+                    <h6>
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>
+                        $350 - $450
+                      </span>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="option-box">
+                <button class="fav-btn">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
+                <a href="https://www.axisbank.com/retail/loans/personal-loan/types-of-personal-loans" class="apply-btn">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="">
+          View All
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end job section -->
+
+  
+        
+
+
+  
+
+  <!-- jQery -->
+  <script src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="static/js/bootstrap.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- custom js -->
+  <script src="static/js/custom.js"></script>
+
+</body>
+
+</html>
